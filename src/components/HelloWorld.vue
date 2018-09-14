@@ -1,5 +1,17 @@
 <template>
   <div class="hello">
+
+    <b-alert show>Default Alert</b-alert>
+
+    <b-alert variant="success" show>Success Alert</b-alert>
+
+    <b-alert variant="danger"
+             dismissible
+             :show="showDismissibleAlert"
+             @dismissed="showDismissibleAlert=false">
+      Dismissible Alert!
+    </b-alert>
+
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -8,7 +20,18 @@
           href="https://vuejs.org"
           target="_blank"
         >
-          Core Docs
+          <b-card title="Core Docs"
+          img-src="https://picsum.photos/600/300/?image=25"
+          img-alt="Image"
+          img-top
+          tag="article"
+          style="max-width: 20rem;"
+          class="mb-2">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </p>
+            <b-button href="#" variant="primary">Go somewhere</b-button>
+          </b-card>
         </a>
       </li>
       <li>
